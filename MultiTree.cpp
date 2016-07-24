@@ -172,12 +172,11 @@ std::vector<TreeNode*> DFSSorted(TreeNode *root)
     return result;
 }
 
-
 int main()
 {
     auto root = initTree();
 
-    std::cout << "\nBFS result: \n";
+    std::cout << "BFS result: \n";
     auto bfsResult = BFS(root);
     for (auto && level : bfsResult)
     {
