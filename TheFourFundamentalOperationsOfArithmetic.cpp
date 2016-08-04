@@ -23,3 +23,20 @@ int sub(int x, int y)
 {
     return add(x, ~y+1); // 一个数字和它的补码的和为0
 }
+
+int mul(int x, int y)
+{
+    int result = 0;
+    
+    int count = 0;
+    while (y != 0)
+    {
+        int bit = y & 1;
+        y >>= 1;
+        if (bit != 0)
+            result += x << count;
+        ++count;
+    }
+    
+    return result;
+}
